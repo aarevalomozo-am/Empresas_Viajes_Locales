@@ -1,0 +1,14 @@
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\bin\Debug\net10.0\Parcial_Final.exe
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\bin\Debug\net10.0\Parcial_Final.deps.json
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\bin\Debug\net10.0\Parcial_Final.runtimeconfig.json
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\bin\Debug\net10.0\Parcial_Final.dll
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\bin\Debug\net10.0\Parcial_Final.pdb
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\Parcial_Final.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\Parcial_Final.AssemblyInfoInputs.cache
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\Parcial_Final.AssemblyInfo.cs
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\Parcial_Final.csproj.CoreCompileInputs.cache
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\Parcial_Final.dll
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\refint\Parcial_Final.dll
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\Parcial_Final.pdb
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\Parcial_Final.genruntimeconfig.cache
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\ref\Parcial_Final.dll
