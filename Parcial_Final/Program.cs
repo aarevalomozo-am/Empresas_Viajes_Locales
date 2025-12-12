@@ -56,6 +56,7 @@ namespace Parical_Final
                         break;
                     case 4:
                         Console.Clear();
+                        Reiniciar_sistema(Choferes_Rutas_Horario, Comisiones, Boletas);
                         Console.WriteLine("\nEl sistema se ha reiniciado correctamente.\nPresione cualquier tecla para continuar...");
                         Console.ReadKey();
                         break;
@@ -589,6 +590,18 @@ namespace Parical_Final
             }
 
         }
-
+        static void Reiniciar_sistema(string[,] Choferes_Rutas_Horario, double[] Comisiones, int[] Boletas)
+        {
+            for (int i = 0; i < Choferes_Rutas_Horario.GetLength(0); i++)
+            {
+                Choferes_Rutas_Horario[i, 0] = "[Vacío]";
+                for (int j = 1; j < Choferes_Rutas_Horario.GetLength(1); j++)
+                {
+                    Choferes_Rutas_Horario[i, j] = "";
+                }
+                Comisiones[i] = 0.0;
+                Boletas[i] = 0;
+            }
+        }
     }
 }
