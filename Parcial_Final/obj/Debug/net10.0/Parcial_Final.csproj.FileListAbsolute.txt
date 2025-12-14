@@ -12,3 +12,4 @@ C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\refint\P
 C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\Parcial_Final.pdb
 C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\Parcial_Final.genruntimeconfig.cache
 C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\ref\Parcial_Final.dll
+C:\Users\HOME\Documents\Repositorio_Git\Parcial_Final\obj\Debug\net10.0\Parcial_Final.sourcelink.json

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Reflection.Emit;
+using System.Runtime.CompilerServices;
 using System.Threading;
 namespace Parical_Final
 {
@@ -248,7 +249,7 @@ namespace Parical_Final
                         }
                         else
                         {
-                        Comisiones[i] = 0.00; // Asegurarse de que la comisión es cero para espacios vacíos
+                            Comisiones[i] = 0.00; // Asegurarse de que la comisión es cero para espacios vacíos
                         }
                     }
     // 2. TÍTULO Y ENCABEZADOS MEJORADOS
@@ -376,17 +377,17 @@ namespace Parical_Final
                                 }                            
                         }
                         Console.Write("Seleccione el numero del chofer a escoger: ");
-                        if (int.TryParse(Console.ReadLine(), out Num_Chofer) && Num_Chofer >= 1 && Num_Chofer <= 6)
+                        if (int.TryParse(Console.ReadLine(), out Num_Chofer) && Num_Chofer >= 1 && Num_Chofer <= 6 )
                         {
                             Num_Chofer--;
-                            if (!string.IsNullOrEmpty(Choferes_Rutas_Horario[Num_Chofer, 0]))
+                            if (Choferes_Rutas_Horario[Num_Chofer, 1] != null) //Arreglar esta parte
                             {
                                 Choferes_Rutas_Horario[Num_Chofer, 1] = origen + "/" + destino;
                                 Console.WriteLine("Ruta asignada correctamente.");
                             }
                             else
                             {
-                                Console.WriteLine("Esa posición está vacía.");
+                                Console.WriteLine("Ya existe una ruta asignada a ese chofer.");
                             }
                         }
                         else if (Num_Chofer == 0)
@@ -427,35 +428,38 @@ namespace Parical_Final
                                 Console.Write("Ingrese la opcion deseada: ");
                                 while(!int.TryParse(Console.ReadLine(), out horario) || horario < 1 || horario > 3)
                                 {
-                                    Console.Write("\nOpcion invalida \nSeleccione una opcion del 1 al 2: ");
+                                    Console.Write("\nOpcion invalida \nSeleccione una opcion del 1 al 3: ");
                                 }
+                                
                                 if (horario==1)
                                 {   
-                                    if (Choferes_Rutas_Horario[Num_Chofer,1] == "Mañana")
+                                    if (Choferes_Rutas_Horario[Num_Chofer,2] == "Mañana" || Choferes_Rutas_Horario[Num_Chofer,2]=="Tarde")
                                     {
-                                        Console.WriteLine("El chofer ya tiene asignado ese horario.");
+                                        Console.WriteLine("El chofer ya tiene asignado un horario.");
                                     }
                                     else
                                     {
                                         Choferes_Rutas_Horario[Num_Chofer,2]="Mañana";
+                                        Console.WriteLine("Horario asignado correctamente.");
                                     }
                                 }
                                 else if (horario==2)
                                 {
-                                    if (Choferes_Rutas_Horario[Num_Chofer,1] == "Tarde")
+                                    if (Choferes_Rutas_Horario[Num_Chofer,2] == "Tarde"|| Choferes_Rutas_Horario[Num_Chofer,2] == "Mañana")
                                     {
-                                        Console.WriteLine("El chofer ya tiene asignado ese horario.");
+                                        Console.WriteLine("El chofer ya tiene asignado un horario.");
                                     }
                                     else
                                     {
                                         Choferes_Rutas_Horario[Num_Chofer,2]="Tarde";
+                                        Console.WriteLine("Horario asignado correctamente.");
                                     }
                                 }
                                 else if (horario==3)
                                 {
                                     Choferes_Rutas_Horario[Num_Chofer,2]="";
                                     Console.WriteLine("Asignación de horario eliminada correctamente.");
-                                }
+                                }  
                             }
                             else
                             {
@@ -491,9 +495,9 @@ namespace Parical_Final
                 Console.WriteLine("3. Reporte de boletas vendidas");
                 Console.WriteLine("4. Salir");
                 Console.Write("Seleccione una opcion: ");
-                while(!int.TryParse(Console.ReadLine(), out opcion) || opcion < 1 || opcion > 3)
+                while(!int.TryParse(Console.ReadLine(), out opcion) || opcion < 1 || opcion >4)
                 {
-                    Console.Write("\nOpcion invalida \nSeleccione una opcion del 1 al 3: ");
+                    Console.Write("\nOpcion invalida \nSeleccione una opcion del 1 al 4: ");
                 }
                 switch (opcion)
                 {
@@ -600,7 +604,7 @@ namespace Parical_Final
                     Choferes_Rutas_Horario[i, j] = "";
                 }
                 Comisiones[i] = 0.0;
-                Boletas[i] = 0;
+                Boletas[i] = 0;  
             }
         }
     }
